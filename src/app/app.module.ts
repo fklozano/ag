@@ -13,6 +13,10 @@ import { MAP } from "../pages/map/map";
 import { POI } from "../pages/poi/poi";
 import { Favorites } from "../pages/favorites/favorites";
 
+import { Db } from "../providers/db";
+import { SQLite } from "@ionic-native/sqlite";
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -39,7 +43,9 @@ import { Favorites } from "../pages/favorites/favorites";
     StatusBar,
     SplashScreen,
     Geolocation,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Db,
+    SQLite
   ]
 })
 export class AppModule {}
